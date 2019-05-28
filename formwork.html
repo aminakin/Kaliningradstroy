@@ -14,13 +14,13 @@
 
 <header class="inner-header container">
   <section class="header-top">
-    <div class="main-logo"><a href="index.html"><img src="img/main-logo.png" width="72" height="auto"></a></div>
+    <div class="main-logo"><a href="index.html"><img src="img/main-logo-mini.png" width="72" height="auto"></a></div>
 <div class="header-info">
   <p class="inner-telephone">+7 4012 216 - 366</p>
 <nav class="main-navigation">
 
   <ul class="navigation-list">
-    <li class="navigation-item"><a href="formwork.html">Опалубка</a></li>
+    <li class="navigation-item"><a class="current-page" href="formwork.html">Опалубка</a></li>
     <li class="navigation-item"><a href="scaffold.html">Леса</a></li>
     <li class="navigation-item"><a href="tower.html">Вышки</a></li>
     <li class="navigation-item"><a href="plywood.html">Фанера</a></li>
@@ -35,29 +35,23 @@
 <section class="header-bottom">
   <div class="moving-backgrond-formwork"></div>
 <h1 class="main-title"><b>Аренда и продажа</b><br>строительной опалубки по лучшим ценам<br>в Калининграде и области</h1>
-<button class="button write-us-button header-button" type="button" name="write-us-button">Заказать консультацию</button>
+<button id="write-us-button" class="button write-us-button header-button" type="button" name="write-us-button">Заказать консультацию</button>
 </section>
 </header>
 
 <main class="container">
 
-<section class="offers">
+<section class="offers-inner">
   <h2 class="section-title">Мы предлагаем следующие виды вышек, туров и подмостков:</h2>
   <p class="sub-title">Вся перечисленная продукция изготавливается в соответствии с технологией производства, нормами и требованиями ГОСТ.</p>
 <div class="wrapper parallax-window" data-parallax="scroll" data-image-src="img/formwork-main-img.png">
   <ul class="offers-images">
-    <li class="offers-image"><a href="formwork.html"><img src="img/formwork.png" width="218" height="296" alt="Опалубка"></a></li>
-    <li class="offers-image"><a href="scaffold.html"><img src="img/scaffold.png" width="218" height="296" alt="Леса"></a></li>
-    <li class="offers-image"><a href="plywood.html"><img src="img/plywood.png" width="218" height="296" alt="Фанера"></a></li>
-    <li class="offers-image"><a href="tower.html"><img src="img/tower.png" width="218" height="296" alt="Вышки"></a></li>
+    <li class="offers-image"><p><img src="img/formwork-2.png" width="243" height="194" alt="Опалубка"></p><p class="image-sub">Опалубка стен, фундаментов</p></li>
+    <li class="offers-image"><p><img src="img/formwork-walls.png" width="243" height="194" alt="Опалубка стен"></p><p class="image-sub">Опалубка стен, фундаментов</p></li>
+    <li class="offers-image"><p><img src="img/formwork-column.png" width="243" height="194" alt="Опалубка колонн"></p><p class="image-sub">Опалубка колонн</p></li>
+    <li class="offers-image"><p><img src="img/formwork-radial.png" width="243" height="194" alt="Опалубка радиальная"></p><p class="image-sub">Опалубка радиальная, круглая</p></li>
+    <li class="offers-image"><p><img src="img/formwork-heavy.png" width="243" height="194" alt="Опалубка тяжёлых перектырий"></p><p class="image-sub">Опалубка высоких и тяжёлых перекрытий</p></li>
   </ul>
-  <ul class="middle-navigation-list">
-    <li class="middle-navigation-item"><a href="formwork.html">Опалубка</a></li>
-    <li class="middle-navigation-item"><a href="scaffold.html">Леса строительные</a></li>
-    <li class="middle-navigation-item"><a href="plywood.html">Фанера</a></li>
-    <li class="middle-navigation-item"><a href="tower.html">Вышки передвижные</a></li>
-  </ul>
-  <button class="button write-us-button main-button" type="button" name="write-us-button">Заказать консультацию</button>
 </div>
 </section>
 <div class="line"></div>
@@ -73,7 +67,31 @@
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.2904918336158!2d20.49413831617637!3d54.72210498029034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e33dff72b3da15%3A0x23473cea44613c94!2z0JrQsNC70LjQvdC40L3Qs9GA0LDQtNGB0YLRgNC-0Lkt0YXQvtC70LTQuNC90LM!5e0!3m2!1sru!2sru!4v1558702363586!5m2!1sru!2sru" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 <p class="copyright">ООО "Калининградстрой-холдинг"</p>
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<section id="popup" class="modal modal-write-us">
+<form class="write-us-form" action="" method="post" id="ajax_form">
+  <p class="write-us-item">
+    <label for="write-us-name">Ваше имя:</label>
+    <input class="write-us-name" type="text" id="write-us-name" name="name" placeholder="Имя Фамилия" required>
+  </p>
+  <p class="write-us-item">
+    <label for="write-us-tel">Ваш телефон:</label>
+    <input class="write-us-tel" type="tel" id="write-us-tel" name="tel" placeholder="+7(999)123-45-67" required>
+  </p>
+  <p class="write-us-item">
+<input class="agree" id="agree" type="checkbox" value="1" required>
+    <label class="label-agree" for="agree">Заполняя форму, Вы даете согласие на обработку своих персональных данных</label>
+  </p>
+  <button id="send-form" class="button write-us-button" type="submit">ОТПРАВИТЬ</button>
+</form>
+<button class="modal-close write-us-close" type="button">Закрыть</button>
+</section>
+<div class="modal modal-result" id="result_form">
+<p>Спасибо, мы Вам перезвоним в ближайшее время.</p>
+<button class="modal-close result-form-close" type="button">Закрыть</button>
+<button class="button write-us-button ok-button">ОК</button>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="js/parallax.min.js"></script>
 <script src="js/script.js"></script>
 </body>

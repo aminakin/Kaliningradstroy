@@ -84,3 +84,23 @@ function sendAjaxForm(result_form, ajax_form, url) {
     	}
  	});
 };
+
+var btn1 = document.querySelector('.btn');
+var btn = $('.btn');
+var $navigation = $('.navigation-list');
+
+btn.on('click touch', function() {
+
+  if ($navigation.css('display') == ('block')) {
+    $navigation.slideUp();
+    btn1.classList.remove('active');
+    btn1.classList.add('not-active');
+//    $navigation.css('display', 'none');
+  }
+  else {
+    $navigation.slideDown();
+    btn1.classList.remove('not-active');
+    btn1.classList.add('active');
+//    $navigation.css('display', 'block');
+  }
+});

@@ -11,6 +11,6 @@ $tel = trim($tel);
 
 if (isset($name) && isset($tel) && $name !== '' && $tel !== '') {
 
-mail("surkoffmotors39rus@yandex.ru", "Заявка с сайта", "ФИО:".$name.". Телефон: ".$tel ,"From: info@surkoffmotors.ru \r\n");
+mail("aminakin2003@mail.ru", "Заявка с сайта", "ФИО:".$name.". Телефон: ".$tel ,"From: info@ksh.ru \r\n");
 }
 ?>

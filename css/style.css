@@ -193,6 +193,14 @@ div[class="moving-backgrond-contacts"] {
   background-image: url(../img/contacts-header-img.png);
 }
 
+div[class="moving-backgrond-services"] {
+  background-image: url(../img/services-header-img.jpg);
+}
+
+div[class="moving-backgrond-construction-materials"] {
+  background-image: url(../img/construction-materials-header-img.jpg);
+}
+
 @keyframes animatedBackground {
     0% {
         transform: scale(1.2);
@@ -304,6 +312,7 @@ div[class="moving-backgrond-contacts"] {
   /*font-weight: normal;*/
   margin: 1.5em 0;
   color: #f7941d;
+  line-height: 1em;
 }
 
 .inner-content {
@@ -315,6 +324,7 @@ div[class="moving-backgrond-contacts"] {
 .inner-content p, .inner-content ul, .inner-content ol {
   margin-bottom: 1vw;
   text-align: justify;
+  font-weight: normal;
 }
 
 .inner-content ol {

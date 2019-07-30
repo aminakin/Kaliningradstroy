@@ -135,14 +135,22 @@ h2 {
 
 .main-header {
   position: relative;
-  padding-bottom: 3.125em;
+  padding-bottom: 15em;
   overflow: hidden;
 }
 
 .header-bottom {
   position: relative;
   overflow: hidden;
-  padding-bottom: 3.125em;
+  padding-bottom: 18em;
+}
+
+.contacts-header {
+  padding-bottom: 3vw;
+}
+
+.with-button {
+  padding-bottom: 3vw;
 }
 
 .inner-header .navigation-item a {
@@ -186,7 +194,7 @@ div[class="moving-backgrond-tower"] {
 }
 
 div[class="moving-backgrond-plywood"] {
-  background-image: url(../img/plywood-header-img.png);
+  background-image: url(../img/plywood-header-img.jpg);
 }
 
 div[class="moving-backgrond-contacts"] {
@@ -199,6 +207,10 @@ div[class="moving-backgrond-services"] {
 
 div[class="moving-backgrond-construction-materials"] {
   background-image: url(../img/construction-materials-header-img.jpg);
+}
+
+.plywood .inner-content {
+  margin-top: 3vw;
 }
 
 @keyframes animatedBackground {
@@ -333,11 +345,16 @@ div[class="moving-backgrond-construction-materials"] {
 
 .inner-content ul {
   list-style: initial;
-  margin-left: 2vw;
 }
 
 .inner-link {
   color: blue;
+}
+
+.plywood .inner-link {
+  text-align: left;
+  display: block;
+  margin: 2vw 0;
 }
 
 .inner-content-img {
@@ -351,10 +368,15 @@ div[class="moving-backgrond-construction-materials"] {
 
 .inner-content table {
   text-align: left;
+  margin-bottom: 2vw;
 }
 
 .inner-content td {
   padding-left: 2vw;
+}
+
+.inner-content h2 {
+  margin-left: 0;
 }
 
 .main-title {
@@ -387,9 +409,28 @@ div[class="moving-backgrond-construction-materials"] {
   font-size: 1.0625em;
 }
 
+.navigation-list-sub {
+  display: flex;
+  display: none;
+  padding: 5px;
+  flex-direction: column;
+  font-size: 0.9em;
+  position: absolute;
+  align-items: flex-start;
+  top: 54px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
 .navigation-item {
   position: relative;
   padding: 0 0.3em;
+  cursor: pointer;
+}
+
+.navigation-list-sub li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .navigation-item a::after {
@@ -399,6 +440,15 @@ div[class="moving-backgrond-construction-materials"] {
   width: 100%;
   border-bottom: solid 2px rgb(247, 148, 29);
   transition: all 0.3s;
+}
+
+.navigation-item-sub a, .inner-header .navigation-item-sub a,
+.contacts-header .navigation-item-sub a {
+  color: black;
+}
+
+.navigation-item-sub a::after {
+  display: none;
 }
 
 .navigation-item .current-page::after {
@@ -565,6 +615,10 @@ div[class="moving-backgrond-construction-materials"] {
   z-index: 0;
 }
 
+.plywood .offers-inner .offers-images::after {
+  display: none;
+}
+
 .index-main .offers-images::before {
   top: calc(331px + 1vw);
 }
@@ -582,7 +636,7 @@ div[class="moving-backgrond-construction-materials"] {
   top: calc(306px + 1vw);
 }
 
-.scaffold .offers-inner .offers-images::after, .plywood .offers-inner .offers-images::after {
+.scaffold .offers-inner .offers-images::after {
   top: calc(664px + 2vw);
 }
 
@@ -626,10 +680,61 @@ div[class="moving-backgrond-construction-materials"] {
   z-index: -1;
 }
 
+.inner-content li {
+  margin-left: 20px;
+}
+
 .rent-content {
   width: 55%;
   background-color: rgba(255,255,255,0.9);
   padding-bottom: 2vw;
+}
+
+.devices-list {
+  list-style: none;
+  margin-top: 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.device-img {
+  margin-bottom: 1vw;
+}
+
+.device-item {
+  list-style: none;
+  text-align: left;
+  width: 400px;
+}
+
+.device-item p {
+  text-align: left;
+}
+
+.documents-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 3vw;
+}
+
+.documents-container a {
+  margin-bottom: 1vw;
+  display: flex;
+  align-items: center;
+}
+
+.services-link {
+  margin-top: 2vw;
+}
+
+.services-link p {
+  text-align: center;
+}
+
+.services-link .inner-link {
+  font-size: 1.5em;
 }
 
 footer {
@@ -653,6 +758,7 @@ iframe {
 
 .contacts-item {
 display: block;
+font-weight: normal;
 }
 
 .contacts-item:not(:last-child) {
@@ -914,6 +1020,16 @@ display: block;
   }
 }
 
+.section-contacts a {
+  color: #f7941d;
+}
+
+.section-contacts {
+  margin-top: 2vw;
+  text-align: center;
+  font-size: 2em;
+}
+
 @media only screen and (min-width : 320px) and (max-width : 769px) {
 
   body {
@@ -952,6 +1068,7 @@ iframe {
 
 .header-contacts {
   justify-content: normal;
+  margin-top: 0;
 }
 
 .main-header .header-contacts li:not(:first-child) {
@@ -977,6 +1094,10 @@ iframe {
   font-size: 1.5em;
 }
 
+.header-top {
+  margin-left: 0;
+}
+
 .inner-header .navigation-item a {
   color: white;
 }
@@ -990,7 +1111,7 @@ iframe {
 }
 
 .inner-telephone {
-  padding-left: 2em;
+  padding-left: 0.5em;
 }
 
 .inner-header .box {
@@ -1008,6 +1129,13 @@ iframe {
 
 .img-float {
   float: none;
+}
+
+.navigation-list-sub {
+  background-color: grey;
+  display: none;
+  top: auto;
+  left: auto;
 }
 
 }

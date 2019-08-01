@@ -182,7 +182,7 @@ div[class^="moving-backgrond"] {
 }
 
 div[class="moving-backgrond-formwork"] {
-  background-image: url(../img/formwork-header-img.png);
+  background-image: url(../img/formwork-header-img.jpg);
 }
 
 div[class="moving-backgrond-scaffold"] {
@@ -207,6 +207,10 @@ div[class="moving-backgrond-services"] {
 
 div[class="moving-backgrond-construction-materials"] {
   background-image: url(../img/construction-materials-header-img.jpg);
+}
+
+div[class="moving-backgrond-objects"] {
+  background-image: url(../img/objects-header-img.jpg);
 }
 
 .plywood .inner-content {
@@ -300,6 +304,13 @@ div[class="moving-backgrond-construction-materials"] {
 
 .staff-list {
   background-color: #f7941d;
+}
+
+.certificates-list {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .copyright {
@@ -421,6 +432,8 @@ div[class="moving-backgrond-construction-materials"] {
   left: 0;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 2;
+  border: 2px solid rgb(247, 148, 29);
+  border-top: none;
 }
 
 .navigation-item {
@@ -431,6 +444,10 @@ div[class="moving-backgrond-construction-materials"] {
 
 .navigation-list-sub li:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.navigation-list-sub li {
+  padding: 5px;
 }
 
 .navigation-item a::after {
@@ -1030,6 +1047,66 @@ font-weight: normal;
   font-size: 2em;
 }
 
+.popup-slider {
+  justify-content: center;
+  align-items: center;
+	position: fixed;
+	height:100%;
+	width:100%;
+  top:0;
+	left:0;
+	display:none;
+	text-align:center;
+}
+
+.popup_bg {
+	background:rgba(0,0,0,0.7);
+	position:absolute;
+	z-index:10;
+	height:100%;
+	width:100%;
+}
+
+.image {
+  cursor: pointer;
+}
+
+.popup_img {
+	position: relative;
+	margin:0 auto;
+	z-index:20;
+	max-height:95%;
+	max-width:95%;
+}
+
+.slick-slide {
+  margin: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.slider-for .slick-slide img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.regular {
+  margin-top: 2em;
+}
+
+.objects-list, .partners-list {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.objects-list li, .partners-list li {
+  margin-bottom: 1em;
+}
+
 @media only screen and (min-width : 320px) and (max-width : 769px) {
 
   body {
@@ -1137,5 +1214,4 @@ iframe {
   top: auto;
   left: auto;
 }
-
 }

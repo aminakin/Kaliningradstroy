@@ -136,3 +136,63 @@ subMenuBtn.on('click touch', function(evt) {
     subMenu.slideDown();
   }
 });
+
+$(document).on('ready', function() {
+
+  $(".regular").slick({
+    lazyLoad: 'ondemand',
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    responsive: [
+{
+  breakpoint: 1024,
+  settings: {
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    infinite: true,
+    dots: true
+  }
+},
+{
+  breakpoint: 600,
+  settings: {
+    slidesToShow: 2,
+    slidesToScroll: 2
+  }
+},
+{
+  breakpoint: 480,
+  settings: {
+    slidesToShow: 1,
+    slidesToScroll: 1
+  }
+}
+]
+});
+});
+
+
+$(document).ready(function() { // Ждём загрузки страницы
+
+	$(".image").on('click touch', function(){	// Событие клика на маленькое изображение
+	  	var img = $(this);	// Получаем изображение, на которое кликнули
+		var src = img.attr('origin'); // Достаем из этого изображения путь до картинки
+		$("body").append("<div class='popup-slider' style='display:flex'>"+ //Добавляем в тело документа разметку всплывающего окна
+						 "<div class='popup_bg'></div>"+ // Блок, который будет служить фоном затемненным
+						 "<img src='"+src+"' class='popup_img' />"+ // Само увеличенное фото
+						 "</div>");
+		$(".popup-slider").fadeIn(300); // Медленно выводим изображение
+		$(".popup_bg").on('click touch', function(){	// Событие клика на затемненный фон
+			$(".popup-slider").fadeOut(300);	// Медленно убираем всплывающее окно
+			setTimeout(function() {	// Выставляем таймер
+			  $(".popup-slider").remove(); // Удаляем разметку всплывающего окна
+			}, 800);
+		});
+	});
+
+});

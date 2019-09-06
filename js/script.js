@@ -88,14 +88,14 @@ $(document).ready(function() {
 
 function sendAjaxForm(result_form, ajax_form, url) {
     jQuery.ajax({
-        url:     "http://surkoffmotors.ru/send.php", //url страницы (action_ajax_form.php)
+        url:      "send.php", //url страницы (action_ajax_form.php)
         type:     "POST", //метод отправки
         dataType: "html", //формат данных
         data: jQuery("#"+ajax_form).serialize(),  // Сеарилизуем объект
         success: function(response) { //Данные отправлены успешно
 
         	writeUs.classList.remove('modal-show');
-          agreeForm.classList.add('modal-show');
+          location.href = 'thanks.html';
     	},
     	error: function(response) { // Данные не отправлены
     		writeUs.classList.remove('modal-show');
@@ -137,6 +137,32 @@ subMenuBtn.on('click touch', function(evt) {
   }
 });
 
+var subMenuBtn1 = $('.sub-menu-open-1');
+var subMenu1 = $('.navigation-list-sub-1');
+
+subMenuBtn1.on('click touch', function(evt) {
+
+    if (subMenu1.css('display') == ('block')) {
+    subMenu1.slideUp();
+  }
+  else {
+    subMenu1.slideDown();
+  }
+});
+
+var subMenuBtn2 = $('.sub-menu-open-2');
+var subMenu2 = $('.navigation-list-sub-2');
+
+subMenuBtn2.on('click touch', function(evt) {
+
+    if (subMenu2.css('display') == ('block')) {
+    subMenu2.slideUp();
+  }
+  else {
+    subMenu2.slideDown();
+  }
+});
+
 $(document).on('ready', function() {
 
   $(".regular").slick({
@@ -147,7 +173,7 @@ $(document).on('ready', function() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    arrows: false,
+    arrows: true,
     responsive: [
 {
   breakpoint: 1024,
@@ -169,7 +195,8 @@ $(document).on('ready', function() {
   breakpoint: 480,
   settings: {
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    arrows: false
   }
 }
 ]
